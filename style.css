@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Schibsted Grotesk", sans-serif;
+  margin: 0;
+}
+section.hero-section {
+  height: auto;
+  position: relative !important;
+  background-size: cover !important;
+  overflow: hidden;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+section.hero-section .inner-container {
+  height: 100% !important;
+  max-width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+section.hero-section .inner-container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.hero-inner {
+  background-color: #d39121;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  animation: animeTranslateOpacity 800ms ease-out 100ms forwards;
+}
+
+@keyframes animeTranslateOpacity {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hero-inner-wrap {
+  text-align: center;
+  width: 100%;
+}
+p.sub-heading {
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  font-family: "Bebas Neue", sans-serif;
+}
+.main-heading {
+  line-height: 4.25rem;
+  font-size: 6.875rem;
+  text-transform: uppercase;
+  margin: 0px;
+  font-family: "Bebas Neue", sans-serif;
+  position: relative;
+}
+.main-heading span.outline-heading {
+  -webkit-text-fill-color: #d39121;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+}
+.creative-heading {
+  perspective: 1000px;
+  color: #fff;
+  position: relative;
+}
+
+.creative-text {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  line-height: normal;
+}
+
+.splitting-char {
+  display: inline-block;
+  opacity: 0;
+  transform: rotateX(70deg);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.creative-text.show .splitting-char {
+  opacity: 1;
+  transform: rotateX(0);
+}
+
+.creative-text.hide .splitting-char {
+  opacity: 0;
+  transform: rotateX(70deg);
+}
+.creative-btn {
+  background-color: #282725;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 19px 32px 16px;
+  border-radius: 4px;
+  font-family: "Bebas Neue", sans-serif;
+  display: inline-flex;
+  column-gap: 10px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.creative-btn .btn-heading {
+  transition: opacity 0.65s, transform 0.85s;
+  transition-timing-function: cubic-bezier(0.15, 0.85, 0.31, 1);
+}
+.creative-btn .btn-heading:before {
+  content: attr(data-text);
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: opacity 0.5s, transform 0.8s;
+  transition-timing-function: cubic-bezier(0.15, 0.85, 0.31, 1);
+}
+
+.creative-btn:hover .btn-heading:before {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}
+.creative-btn:hover .btn-heading {
+  transform: translateY(-200%);
+}
+.creative-btn:hover {
+  -webkit-box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+}
+img.animated-banner {
+  right: -50px;
+  position: absolute;
+  bottom: 50px;
+  animation: float 2s linear 0.5s infinite alternate both;
+  max-width: 100%;
+  height: auto;
+  display: inline-block !important;
+}
+
+.animation-float {
+  animation: float 2000ms linear 500ms infinite alternate both;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+.animation-float-small {
+  animation: float 2000ms linear 500ms infinite alternate both;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.sticky-footer {
+  position: fixed;
+  width: 100%;
+  background: #333;
+  z-index: 99;
+  bottom: 0;
+}
+.sticky-footer .footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  padding-right: 15px;
+}
+.creditd a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+.social ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  column-gap: 10px;
+  align-items: center;
+}
+.social ul li a {
+  display: flex;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.social ul li a img {
+  max-width: 20px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  section.hero-section {
+    height: 685px;
+  }
+  .hero-inner {
+    height: 630px;
+    width: 630px;
+  }
+  img.animated-banner {
+    bottom: 20px;
+  }
+  .main-heading {
+    font-size: 5.875rem;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .hero-inner {
+    height: 320px;
+    width: 320px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  img.animated-banner {
+    display: none !important;
+  }
+  p.sub-heading {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .main-heading {
+    font-size: 3.5rem;
+    line-height: 36px;
+  }
+  .creative-btn {
+    font-size: 16px;
+    padding: 10px 25px 8px;
+  }
+}
